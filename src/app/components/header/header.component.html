@@ -1,0 +1,138 @@
+<!--MOBILE-->
+<nav 
+class="navbar navbar-expand-lg navbar-light bg-light d-md-none"
+style="border-bottom: 15px solid #eb8c2a;"
+>
+  <div class="container-fluid">
+    <a 
+    class="navbar-brand" 
+    href="#" 
+    style="width: 3em;"
+    >
+      <img class="img-fluid" [src]="logo" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">NOSOTROS</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            MATERIALES
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Alfombra 1</a></li>
+            <li><a class="dropdown-item" href="#">Alfombra 2</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Alfombra 3</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">FOTOS</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<!--END MOBILE-->
+
+<!--DESKTOP-->
+<header
+class="d-none d-md-block"
+  [ngStyle]="{
+    'background-color': headerStyle.backgroundColor
+  }"
+>
+  <div>
+    <div 
+      class="social-network"
+     style="position: absolute; top: -1.5em; right: 0;"
+    >
+      <div class="social-network--img" style="margin: 0 0.5em; width: 3em;">
+        <img class="img-fluid" src="./assets/svg/facebook-brand-black-circle.png" alt="">
+      </div>
+      <div class="social-network--img" style="margin: 0 0.5em; width: 3em;">
+        <img class="img-fluid" src="./assets/svg/instagram-brand-black-circle.png" alt="">
+      </div>
+      <div class="social-network--img" style="margin: 0 0.5em; width: 3em;">
+        <img class="img-fluid" src="./assets/svg/tik-tok-brand-black-circle.png" alt="">
+      </div>
+      <div class="social-network--img" style="margin: 0 0.5em; width: 3em;">
+        <img class="img-fluid" src="./assets/svg/youtube-brand-black-circle.png" alt="">
+      </div>
+    </div>
+
+    <div style="border-bottom: 15px solid #eb8c2a;    position: relative;">
+
+      <div 
+      class="menu"
+      style="margin-bottom: 1em;"
+      >
+
+      <!--agregado-->
+      <div>
+        <div style="height: 7em;width: 8em;margin: 0 3em 0 5em;display: inline-block;">
+        </div>
+        <div style="width: 9em;margin: 0 3em 0 5em;position: absolute;bottom: -15px;">
+          <img class="img-fluid" [src]="logo" alt="">
+        </div>    
+      </div>
+      <!--agregado-->
+
+      <!--agregado-->
+        <ul class="menu__list">
+          <li
+          *ngFor="let menu of menuList"
+          class="menu__list--items"
+          style="letter-spacing: -2px;"
+          [ngStyle]="{
+            'color': menuListStyle.color,
+            'font-size': menuListStyle.fontSize,
+            'font-weight': menuListStyle.fontWeight
+          }"
+          [routerLink]="menu.url"
+          routerLinkActive="menu--active"
+          [routerLinkActiveOptions]="{ exact: true }" 
+          >
+          {{menu.name}} 
+          </li>
+        </ul>
+        <div *ngIf="specialButton.active">
+          <button
+          class="special-button"
+          style="letter-spacing: -2px; margin-right: 3em;"
+          [ngStyle]="{
+            'background-color': specialButton.backgroundColor,
+            'border-radius': specialButton.borderRadius,
+            'border': specialButton.border,
+            'color': specialButton.color,
+            'font-size': specialButton.fontSize,
+            'font-weight': specialButton.fontWeight,
+            'padding': specialButton.padding
+          }"
+          routerLink="cotizacion"
+          routerLinkActive="menu--active"
+          [routerLinkActiveOptions]="{ exact: true }" 
+          >
+          {{ specialButton.text }}
+          </button>
+        </div>
+
+      <!--agregado-->
+
+      </div>
+    </div>
+
+  </div>
+</header>
+<!--END DESKTOP-->

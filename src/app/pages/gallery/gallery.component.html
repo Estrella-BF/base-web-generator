@@ -1,0 +1,23 @@
+<div class="gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="gallery__list-images">
+                    <div
+                    *ngFor="let item of images" 
+                    class="gallery__item"
+                    style="margin-bottom: 2em;width: 28%; cursor: pointer"
+                    >
+                    <app-zoom-image imageUrl="./assets/img/1.jpeg"></app-zoom-image>
+                    <!--     <img 
+                        [src]="item.url" alt="" 
+                        class="img-fluid gallery__item--image"
+                        > -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

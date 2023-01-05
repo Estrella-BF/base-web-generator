@@ -1,0 +1,27 @@
+.carousel-caption { 
+    bottom: 6rem;
+
+    &.full-width {
+        width: 100%;
+        left: 0;
+    }
+
+    &.background-black-and-white {
+        background: #00000085;
+    }
+}
+
+.carousel-indicators {
+
+    &.big-circle-indicators {
+
+        button {
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            margin: 0 0.5em;
+        
+        }
+
+    }
+}

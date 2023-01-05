@@ -1,0 +1,35 @@
+.menu {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.menu__list {
+  display: contents;
+}
+
+.menu__list--items {
+  cursor: pointer;
+
+  &.current-url {
+    font-weight: 400 !important;
+    color: yellow;
+  }
+}
+
+.social-network {
+  display: flex; 
+  justify-content: flex-end; 
+  align-items: center;
+  margin: 2em 0;
+}
+
+.social-network--img {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.menu--active {
+  // personalizado
+  font-weight: 400 !important;
+}

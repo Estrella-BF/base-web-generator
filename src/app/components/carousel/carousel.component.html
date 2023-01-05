@@ -1,0 +1,103 @@
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div
+    class="carousel-indicators"
+    [ngClass]="style.radioButtons"
+    >
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div 
+    class="carousel-inner"
+    [ngStyle]="{
+      'font-size': style.fontSize
+    }"
+    >
+      <div class="carousel-item active">
+
+        <!--MOBILE-->
+        <div class="d-md-none">
+          <img class="d-block w-100" alt="..." src="assets/img/1.jpeg" 
+          [ngStyle]="{
+              'width': imagesStyle.width,
+              'height': imagesStyle.heightMobile
+          }">
+        </div>
+        <!--END MOBILE-->
+        <!--DESKTOP-->
+        <div class="d-none d-md-block">
+          <img class="d-block w-100" alt="..." src="assets/img/1.jpeg" 
+          [ngStyle]="{
+              'width': imagesStyle.width,
+              'height': imagesStyle.height
+          }">
+        </div>
+        <!--END DESKTOP-->
+<!--         <img class="d-block w-100" alt="..." src="assets/img/1.jpeg" 
+        [ngStyle]="{
+            'width': imagesStyle.width,
+            'height': imagesStyle.height
+        }"> -->
+        <div class="carousel-caption background-black-and-white full-width d-none d-md-block">
+      <!--     <h5>Alfombra 1</h5> -->
+          <p>ALFOMBRAS HECHAS ENTERAMENTE CON MATERIAS PRIMAS 100% NATURALES</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <!--MOBILE-->
+        <div class="d-md-none">
+          <img class="d-block w-100" alt="..." src="assets/img/2.jpeg" 
+          [ngStyle]="{
+              'width': imagesStyle.width,
+              'height': imagesStyle.heightMobile
+          }">
+        </div>
+        <!--END MOBILE-->
+        <!--DESKTOP-->
+        <div class="d-none d-md-block">
+          <img class="d-block w-100" alt="..." src="assets/img/2.jpeg" 
+          [ngStyle]="{
+              'width': imagesStyle.width,
+              'height': imagesStyle.height
+          }">
+        </div>
+        <!--END DESKTOP-->
+        <div class="carousel-caption background-black-and-white full-width d-none d-md-block">
+   <!--        <h5>Alfombra 2</h5> -->
+          <p>ALFOMBRAS HECHAS ENTERAMENTE CON MATERIAS PRIMAS 100% NATURALES</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <!--MOBILE-->
+        <div class="d-md-none">
+          <img class="d-block w-100" alt="..." src="assets/img/3.jpeg" 
+          [ngStyle]="{
+              'width': imagesStyle.width,
+              'height': imagesStyle.heightMobile
+          }">
+        </div>
+        <!--END MOBILE-->
+        <!--DESKTOP-->
+        <div class="d-none d-md-block">
+          <img class="d-block w-100" alt="..." src="assets/img/3.jpeg" 
+          [ngStyle]="{
+              'width': imagesStyle.width,
+              'height': imagesStyle.height
+          }">
+        </div>
+        <!--END DESKTOP-->
+        <div class="carousel-caption background-black-and-white full-width d-none d-md-block">
+<!--           <h5>Alfombra 3</h5> -->
+          <p>ALFOMBRAS HECHAS ENTERAMENTE CON MATERIAS PRIMAS 100% NATURALES</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>

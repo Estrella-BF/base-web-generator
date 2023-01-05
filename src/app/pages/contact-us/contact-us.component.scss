@@ -1,0 +1,137 @@
+.contact-us__social-network--background, .contact-us__phone--background, .contact-us__mail--background, .contact-us__whatsapp--background {
+    text-align: right;
+  /*   display: flex;
+    justify-content: end;
+    padding-right: 10em; */
+} 
+
+.contact-us__social-network, .contact-us__phone, .contact-us__mail, .contact-us__whatsapp {
+    display: inline-block;
+    margin-right: 5em;
+    width: 36em;
+    text-align: center;
+    /* text-align: center;
+    width: 25%; */
+}
+
+.contact-us__social-network--background {
+    background-color: #222222;
+    color: white;
+    padding-top: 12em;
+    padding-bottom: 6em;
+}
+
+.contact-us__social-network--text {
+    font-size: 3.5rem;
+}
+
+.contact-us__social-network--icon {
+ /*    display: flex;
+    justify-content: center;
+    gap: 2em; */
+    font-size: 5rem;
+    text-align: center;
+
+    i {
+        margin: 0 0.3em;
+        vertical-align: middle;
+    }
+}
+
+.contact-us__social-network--icons {
+    width: 6em;
+}
+
+.contact-us__phone--background, .contact-us__mail--background {
+    background-color: #eb8c2a;
+    color: white;
+}
+
+.contact-us__phone--background {
+    padding-top: 8em;
+    padding-bottom: 10em;
+}
+
+.contact-us__phone--icons, .contact-us__mail--icons {
+    width: 10em;
+}
+
+.contact-us__phone--icon {
+    font-size: 5rem;
+}
+
+.contact-us__phone--text, .contact-us__us__mail--text, .contact-us__mail--text {
+    font-size: 3rem;
+    font-weight: 500;
+
+    span {
+        display: block;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+}
+
+.contact-us__mail--icon {
+    i {
+        font-size: 5rem;
+    }
+}
+
+.contact-us__mail--background {
+    padding-bottom: 8em;
+}
+
+.contact-us__whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-us__whatsapp--background {
+    padding-top: 5em;
+    padding-bottom: 5em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-us__whatsapp--icon {
+    margin-left: 2em;
+    width: 6em;
+}
+
+.contact-us__whatsapp--text {
+    font-weight: 300;
+    font-size: 3rem;
+    line-height: 1.1;
+    letter-spacing: -3px;
+}
+
+.footer--background {
+    background-color: #eb8c2a;
+    height: 20em;
+}
+
+.contact-us--background-img {
+    img {
+        position: absolute;
+        width: 63em;
+        margin-top: 9em;
+        margin-left: 6em;
+        box-shadow: 13px 16px 29px rgb(86 86 86);
+    }    
+}
+
+.contact-us__social-network--facebook, .contact-us__social-network--instagram {
+    display: inline-block;
+}
+.contact-us__social-network--instagram {
+    i {
+        font-size: 3.5rem;
+        background: white;
+        border-radius: 50%;
+        color: initial;
+        width: 74%;
+        padding: 0.2em;
+    }
+}
