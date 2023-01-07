@@ -7,7 +7,8 @@
   cursor: zoom-in;
 
   .zoom {
-    height: 21em;
+
+    height: 100%;
 
   }
 
@@ -81,4 +82,23 @@
     }
   }
   
+}
+
+.big-image {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0px;
+
+  .big-image__zoom {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -25%);
+  }
+}
+
+.block-image { 
+  opacity: 0.5;
+  cursor: none;
 }

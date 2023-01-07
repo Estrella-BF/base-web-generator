@@ -14,6 +14,7 @@ import { QuotationStepComponent } from './pages/quotation/components/quotation-s
 import { SimpleCatalogComponent } from './pages/simple-catalog/simple-catalog.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { ZoomImageComponent } from './components/zoom-image/zoom-image.component';
+import { ClickOutDirective } from './components/zoom-image/directive/click-out.directive';
 
 const routes: Routes = [
   {
@@ -67,7 +68,8 @@ const routes: Routes = [
     QuotationStepComponent,
     SimpleCatalogComponent,
     GalleryComponent,
-    ZoomImageComponent
+    ZoomImageComponent,
+    ClickOutDirective
   ],
   imports: [
     RouterModule.forRoot(routes),

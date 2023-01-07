@@ -8,6 +8,7 @@ import { IImage } from '../simple-catalog/simple-catalog.interface';
 })
 export class GalleryComponent implements OnInit {
 
+  activeZoom = false;
   images: IImage[] = [
     {
       url: './assets/temp/1 HANDT.png'
@@ -59,6 +60,13 @@ export class GalleryComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  clickZoom() {   
+    if (!this.activeZoom) {
+      console.log('zoom');
+      this.activeZoom = true;  
+    }  
   }
 
 }

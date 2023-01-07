@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-zoom-image',
@@ -7,6 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ZoomImageComponent implements OnInit {
 
+  @Input()  activeZoom = false;
+  @Output() activeZoomChange = new EventEmitter<boolean>();
+
+  
   @Input()
   imageUrl: string = '';
 
@@ -33,7 +37,6 @@ export class ZoomImageComponent implements OnInit {
   } */
 
   public zoomIn(event: any) {
-    console.log('zoom in', event);
     
     if (event) {
 
@@ -50,8 +53,6 @@ export class ZoomImageComponent implements OnInit {
       y = offsetY / zoomer.offsetHeight * 100;
 
       zoomer.style.backgroundPosition = x + '% ' + y + '%';
-      console.log('--zoomer', zoomer.style.backgroundPosition);
-      console.log('------');
       
   
     }
@@ -61,4 +62,12 @@ export class ZoomImageComponent implements OnInit {
   
   }
 
+
+  selectImage(image: string) {
+    if (!this.activeZoom) {
+      this.activeZoomChange.emit(true);
+    }
+
+    console.log('click', image);
+  }
 }
