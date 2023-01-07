@@ -7,10 +7,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ZoomImageComponent implements OnInit {
 
-  @Input()  activeZoom = false;
-  @Output() activeZoomChange = new EventEmitter<boolean>();
+  showBigImage = false;
 
-  
   @Input()
   imageUrl: string = '';
 
@@ -64,10 +62,7 @@ export class ZoomImageComponent implements OnInit {
 
 
   selectImage(image: string) {
-    if (!this.activeZoom) {
-      this.activeZoomChange.emit(true);
-    }
-
+    this.showBigImage = true;
     console.log('click', image);
   }
 }

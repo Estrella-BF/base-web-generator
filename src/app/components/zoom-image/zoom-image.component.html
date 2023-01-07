@@ -1,13 +1,14 @@
 <div
 class="multiple-items"
-[ngClass]="{ 'block-image': activeZoom }"
+[ngClass]="{ 'block-image': showBigImage }"
 (click)="selectImage(imageUrl)"
 >
-<img class="img-fluid h-100" [src]="imageUrl" />
+  <img class="img-fluid h-100" [src]="imageUrl" />
 
 </div>
 
-<div *ngIf="activeZoom" class="big-image"
+<div *ngIf="showBigImage" class="big-image"
+(appClickOut)="showBigImage = false" appClickOut
 >
 
   <div class="big-image__zoom">

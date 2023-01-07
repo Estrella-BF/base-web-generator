@@ -62,11 +62,4 @@ export class GalleryComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  clickZoom() {   
-    if (!this.activeZoom) {
-      console.log('zoom');
-      this.activeZoom = true;  
-    }  
-  }
-
 }
