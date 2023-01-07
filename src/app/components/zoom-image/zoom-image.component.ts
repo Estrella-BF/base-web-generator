@@ -7,8 +7,11 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ZoomImageComponent implements OnInit {
 
-  showBigImage = false;
+  @Input()  activeZoom = false;
+  @Output() activeZoomChange = new EventEmitter<boolean>(); 
+  @Output() imageToZoom = new EventEmitter<string>(); 
 
+  
   @Input()
   imageUrl: string = '';
 
@@ -18,51 +21,13 @@ export class ZoomImageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // this.slickConfig();
   };
 
-/*   private slickConfig() {
-    setTimeout( () => {
-      const slick = {
-        dots: true,
-        infinite: true,
-        cssEase: 'linear'
-      };
-      slick['slidesToShow'] = 1;
-      slick['slidesToScroll'] = 1;
-      $('.multiple-items').slick(slick);
-    }, 100);
-  } */
-
-  public zoomIn(event: any) {
-    
-    if (event) {
-
-      const zoomer = event.currentTarget;
-      let offsetX: number;
-      let offsetY: number = 0;
-      let x: number;
-      let y: number;
-
-      event.offsetX ? offsetX = event.offsetX : offsetX = event.touches[0].pageX;
-      event.offsetY ? offsetY = event.offsetY : offsetX = event.touches[0].pageX;
-
-      x = offsetX / zoomer.offsetWidth * 100;
-      y = offsetY / zoomer.offsetHeight * 100;
-
-      zoomer.style.backgroundPosition = x + '% ' + y + '%';
-      
-  
-    }
-  }
-
-  public zoomOut(event: any) {
-  
-  }
 
 
   selectImage(image: string) {
-    this.showBigImage = true;
+    this.activeZoomChange.emit(true);
+    this.imageToZoom.emit(image)
     console.log('click', image);
   }
 }
