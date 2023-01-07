@@ -9,7 +9,8 @@
                     style="margin-bottom: 2em;width: 28%"
                     >
                     <app-zoom-image 
-                    imageUrl="./assets/img/1.jpeg"></app-zoom-image>
+                    (zoomActive)="zoomActive($event)"
+                    [imageUrl]="item.url"></app-zoom-image>
 
                     </div>
                 </div>

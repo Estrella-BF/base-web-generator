@@ -11,24 +11,24 @@ export class GalleryComponent implements OnInit {
   activeZoom = false;
   images: IImage[] = [
     {
-      url: './assets/temp/1 HANDT.png'
+      url: './assets/img/1.jpeg'
     },
     {
-      url: './assets/temp/2 HANDT.png'
+      url: './assets/temp/2-HANDT.png'
     },
     {
-      url: './assets/temp/3 HANDT.png'
+      url: './assets/temp/3-HANDT.png'
     },
     {
-      url: './assets/temp/4 HANDT.png'
+      url: './assets/temp/4-HANDT.png'
     },
     {
-      url: './assets/temp/5 HANDT.png'
+      url: './assets/temp/5-HANDT.png'
     },
     {
-      url: './assets/temp/6 HANDT.png'
+      url: './assets/temp/6-HANDT.png'
     },
-    {
+    /* {
       url: './assets/temp/7 HANDT.png'
     },
     {
@@ -54,12 +54,17 @@ export class GalleryComponent implements OnInit {
     },
     {
       url: './assets/temp/15 HANDT.png'
-    },
+    }, */
   ]
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  zoomActive(isActive: boolean) {
+    console.log('is active zoom', isActive);
+    
   }
 
 }

@@ -12,27 +12,16 @@ export class ZoomImageComponent implements OnInit {
   @Input()
   imageUrl: string = '';
 
+  @Output()
+  zoomActive: EventEmitter<boolean> = new EventEmitter();
+
   public value = true;
 
 
   constructor() { }
 
   ngOnInit() {
-    // this.slickConfig();
   };
-
-/*   private slickConfig() {
-    setTimeout( () => {
-      const slick = {
-        dots: true,
-        infinite: true,
-        cssEase: 'linear'
-      };
-      slick['slidesToShow'] = 1;
-      slick['slidesToScroll'] = 1;
-      $('.multiple-items').slick(slick);
-    }, 100);
-  } */
 
   public zoomIn(event: any) {
     
@@ -57,12 +46,16 @@ export class ZoomImageComponent implements OnInit {
   }
 
   public zoomOut(event: any) {
-  
   }
 
 
   selectImage(image: string) {
     this.showBigImage = true;
-    console.log('click', image);
+    this.zoomActive.emit(true);
+  }
+
+  clickOut() {
+    this.showBigImage = false;
+    this.zoomActive.emit(false);
   }
 }
