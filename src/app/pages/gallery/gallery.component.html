@@ -7,6 +7,7 @@
                     *ngFor="let item of images" 
                     class="gallery__item"
                     style="margin-bottom: 2em;width: 28%"
+                    [ngClass]="{ 'disable-image': activeZoom }"
                     >
                         <div
                         class="multiple-items"
@@ -17,9 +18,8 @@
                         </div>
 
                     </div>
-                    <app-zoom-image 
-                    *ngIf="showBigImage"
-                    imageUrl="./assets/img/1.jpeg"
+                    <app-zoom-image
+                    [imageUrl]="imageSelected"
                     [(activeZoom)]="activeZoom"
                     >
                     </app-zoom-image>

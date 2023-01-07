@@ -9,10 +9,7 @@ import { IImage } from '../simple-catalog/simple-catalog.interface';
 export class GalleryComponent implements OnInit {
 
   activeZoom = false;
-  showBigImage = false;
-/* 
-  @Output()
-  zoomActive: EventEmitter<boolean> = new EventEmitter(); */
+  imageSelected = '';
   
   images: IImage[] = [
     {
@@ -74,8 +71,10 @@ export class GalleryComponent implements OnInit {
 
 
   selectImage(image: string) {
-    this.showBigImage = true;
-    this.activeZoom = true;
+    if (!this.activeZoom) {
+      this.activeZoom = true;
+      this.imageSelected = image;
+    }
 /*     this.zoomActive.emit(true); */
   }
 
