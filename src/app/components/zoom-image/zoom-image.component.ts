@@ -6,14 +6,17 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./zoom-image.component.scss']
 })
 export class ZoomImageComponent implements OnInit {
-
-  showBigImage = false;
+/* 
+  showBigImage = false; */
 
   @Input()
-  imageUrl: string = '';
+  activeZoom: boolean = false;
+
+  @Input()
+  imageUrl: string = './assets/img/1.jpeg';
 
   @Output()
-  zoomActive: EventEmitter<boolean> = new EventEmitter();
+  activeZoomChange: EventEmitter<boolean> = new EventEmitter();
 
   public value = true;
 
@@ -48,14 +51,10 @@ export class ZoomImageComponent implements OnInit {
   public zoomOut(event: any) {
   }
 
-
-  selectImage(image: string) {
-    this.showBigImage = true;
-    this.zoomActive.emit(true);
-  }
-
   clickOut() {
-    this.showBigImage = false;
-    this.zoomActive.emit(false);
+    console.log('click out');
+    this.activeZoomChange.emit(false);
+/*     this.showBigImage = false; */
+   /*  this.zoomActive.emit(false); */
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { IImage } from '../simple-catalog/simple-catalog.interface';
 
 @Component({
@@ -9,6 +9,11 @@ import { IImage } from '../simple-catalog/simple-catalog.interface';
 export class GalleryComponent implements OnInit {
 
   activeZoom = false;
+  showBigImage = false;
+/* 
+  @Output()
+  zoomActive: EventEmitter<boolean> = new EventEmitter(); */
+  
   images: IImage[] = [
     {
       url: './assets/img/1.jpeg'
@@ -62,9 +67,16 @@ export class GalleryComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  zoomActive(isActive: boolean) {
+/*   zoomActive(isActive: boolean) {
     console.log('is active zoom', isActive);
     
+  } */
+
+
+  selectImage(image: string) {
+    this.showBigImage = true;
+    this.activeZoom = true;
+/*     this.zoomActive.emit(true); */
   }
 
 }

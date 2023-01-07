@@ -8,11 +8,21 @@
                     class="gallery__item"
                     style="margin-bottom: 2em;width: 28%"
                     >
-                    <app-zoom-image 
-                    (zoomActive)="zoomActive($event)"
-                    [imageUrl]="item.url"></app-zoom-image>
+                        <div
+                        class="multiple-items"
+                        (click)="selectImage(item.url)"
+                        >
+                            <img class="img-fluid h-100" [src]="item.url" />
+
+                        </div>
 
                     </div>
+                    <app-zoom-image 
+                    *ngIf="showBigImage"
+                    imageUrl="./assets/img/1.jpeg"
+                    [(activeZoom)]="activeZoom"
+                    >
+                    </app-zoom-image>
                 </div>
 
             </div>
