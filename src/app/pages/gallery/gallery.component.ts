@@ -16,7 +16,7 @@ export class GalleryComponent implements OnInit {
       url: './assets/img/1.jpeg'
     },
     {
-      url: './assets/temp/2-HANDT.png'
+      url: './assets/temp/test-photo.png'
     },
     {
       url: './assets/temp/3-HANDT.png'

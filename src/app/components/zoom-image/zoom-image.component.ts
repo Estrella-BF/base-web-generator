@@ -6,8 +6,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./zoom-image.component.scss']
 })
 export class ZoomImageComponent implements OnInit {
-/* 
-  showBigImage = false; */
 
   @Input()
   activeZoom: boolean = false;
