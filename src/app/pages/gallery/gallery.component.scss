@@ -28,4 +28,10 @@
     display: inline-block;
     font-size: 1.2rem;
     margin-right: 1.5em;
+    margin-bottom: 2em;
+}
+
+.gallery__menu--selected {
+    color: #eb8c2a;
+    text-decoration: underline;
 }

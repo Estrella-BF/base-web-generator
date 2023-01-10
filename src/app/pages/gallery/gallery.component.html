@@ -5,9 +5,10 @@
                 <div class="gallery__menu">
                     <div 
                     *ngFor="let menu of menus; let i = index" 
+                    [ngClass]="{ 'gallery__menu--selected': menu.idMenu === indexMenu + 1 }"
                     class="gallery__menu--menu"
                     (click)="selectMenu(i)"
-                    >{{ menu.name }}</div>
+                    >{{ menu.name}}</div>
                 </div>
                 <div class="gallery__list-images">
                     <div

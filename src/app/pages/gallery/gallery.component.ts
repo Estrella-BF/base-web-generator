@@ -10,7 +10,7 @@ export class GalleryComponent implements OnInit {
 
   activeZoom = false;
   imageSelected = '';
-  
+  indexMenu = 0;
   imagesToShow: IImage[] = [];
   images: IImage[] = [
     {
@@ -103,6 +103,7 @@ export class GalleryComponent implements OnInit {
   }
 
   selectMenu(index: number) {
+    this.indexMenu = index;
     const menuSelected = this.menus[index];
     this.imagesToShow = this.images.filter((image: IImage) => image.idMenu === menuSelected.idMenu);
   }
