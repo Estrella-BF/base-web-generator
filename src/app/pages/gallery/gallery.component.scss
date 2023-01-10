@@ -19,18 +19,20 @@
     width: 100%;
 }
 
-
-.block-image { 
+.disable-image {
     opacity: 0.5;
 }
 
-.big-image {
-    top: 6em;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    
-    img {
-        width: 52%;
-    }
+.gallery__menu--menu {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-right: 1.5em;
+    margin-bottom: 2em;
 }
+
+.gallery__menu--selected {
+    color: #eb8c2a;
+    text-decoration: underline;
+}
+

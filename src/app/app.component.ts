@@ -58,7 +58,7 @@ export class AppComponent implements OnInit {
     },
     {
       id: '5',
-      name: 'CONTACTENOS',
+      name: 'CONTÁCTENOS',
       url: 'contactanos'
     },
   ];
