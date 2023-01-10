@@ -9,7 +9,7 @@ export class ZoomImageComponent implements OnInit {
 
   @Input()
   activeZoom: boolean = false;
-
+  
   @Input()
   imageUrl: string = './assets/img/1.jpeg';
 
@@ -23,7 +23,7 @@ export class ZoomImageComponent implements OnInit {
 
   ngOnInit() {
   };
-
+  
   public zoomIn(event: any) {
     
     if (event) {
@@ -54,5 +54,6 @@ export class ZoomImageComponent implements OnInit {
     this.activeZoomChange.emit(false);
 /*     this.showBigImage = false; */
    /*  this.zoomActive.emit(false); */
+
   }
 }

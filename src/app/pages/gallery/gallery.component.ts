@@ -108,4 +108,33 @@ export class GalleryComponent implements OnInit {
     this.imagesToShow = this.images.filter((image: IImage) => image.idMenu === menuSelected.idMenu);
   }
 
+  public zoomIn(event: any) {
+    
+    if (event) {
+
+      const zoomer = event.currentTarget;
+      let offsetX: number;
+      let offsetY: number = 0;
+      let x: number;
+      let y: number;
+
+      event.offsetX ? offsetX = event.offsetX : offsetX = event.touches[0].pageX;
+      event.offsetY ? offsetY = event.offsetY : offsetX = event.touches[0].pageX;
+
+      x = offsetX / zoomer.offsetWidth * 100;
+      y = offsetY / zoomer.offsetHeight * 100;
+
+      zoomer.style.backgroundPosition = x + '% ' + y + '%';
+      
+  
+    }
+  }
+
+  public zoomOut(event: any) {
+  
+  }
+
+  showImageToZoom(image: string) {
+    this.imageToZoom = image;
+  }
 }
