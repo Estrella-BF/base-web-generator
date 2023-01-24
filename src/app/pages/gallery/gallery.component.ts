@@ -14,28 +14,86 @@ export class GalleryComponent implements OnInit {
   imagesToShow: IImage[] = [];
   images: IImage[] = [
     {
-      url: './assets/img/1.jpeg',
+      url: './assets/temp/photos/handtufted/1hand.png',
       idMenu: 1
     },
     {
-      url: './assets/temp/test-photo.png',
-      idMenu: 2
-    },
-    {
-      url: './assets/temp/3-HANDT.png',
-      idMenu: 3
-    },
-    {
-      url: './assets/temp/4-HANDT.png',
+      url: './assets/temp/photos/handtufted/2hand.png',
       idMenu: 1
     },
     {
-      url: './assets/temp/5-HANDT.png',
-      idMenu: 2
+      url: './assets/temp/photos/handtufted/3hand.png',
+      idMenu: 1
     },
     {
-      url: './assets/temp/6-HANDT.png',
-      idMenu: 3
+      url: './assets/temp/photos/handtufted/4hand.png',
+      idMenu: 1
+    },
+    {
+      url: './assets/temp/photos/handtufted/5hand.png',
+      idMenu: 1
+    },
+    {
+      url: './assets/temp/photos/handtufted/6hand.png',
+      idMenu: 1
+    },
+    {
+      url: './assets/temp/photos/handtufted/7hand.png',
+      idMenu: 1
+    },
+    {
+      url: './assets/temp/photos/handtufted/8hand.png',
+      idMenu: 1
+    },
+    {
+      url: './assets/temp/photos/handtufted/9hand.png',
+      idMenu: 1
+    },
+    {
+      url: './assets/temp/photos/handtufted/10hand.png',
+      idMenu: 1
+    },    {
+      url: './assets/temp/photos/handtufted/11hand.png',
+      idMenu: 1
+    },
+    {
+      url: './assets/temp/photos/handtufted/12hand.png',
+      idMenu: 1
+    },
+    {
+      url: './assets/temp/photos/handtufted/13hand.png',
+      idMenu: 1
+    },
+    {
+      url: './assets/temp/photos/handtufted/14hand.png',
+      idMenu: 1
+    },
+    {
+      url: './assets/temp/photos/handtufted/15hand.png',
+      idMenu: 1
+    },    {
+      url: './assets/temp/photos/handtufted/16hand.png',
+      idMenu: 1
+    },
+    {
+      url: './assets/temp/photos/handtufted/17hand.png',
+      idMenu: 1
+    },
+    {
+      url: './assets/temp/photos/handtufted/18hand.png',
+      idMenu: 1
+    },
+    {
+      url: './assets/temp/photos/handtufted/19hand.png',
+      idMenu: 1
+    },
+    {
+      url: './assets/temp/photos/handtufted/20hand.png',
+      idMenu: 1
+    },
+    {
+      url: './assets/temp/photos/handtufted/21hand.png',
+      idMenu: 1
     },
     /* {
       url: './assets/temp/7 HANDT.png'
@@ -134,7 +192,4 @@ export class GalleryComponent implements OnInit {
   
   }
 
-  showImageToZoom(image: string) {
-    this.imageToZoom = image;
-  }
 }
