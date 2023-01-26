@@ -193,12 +193,10 @@ export class GalleryComponent implements OnInit {
   }
 
   public closeZoom(change: boolean) {
-    console.log('closeZoom', change);
     if (change) {
       
     if (this.activeZoom) {
 
-      console.log('a cero');
       this.counterToEnableToZoom = 0;
     }
       this.imageSelected = '';

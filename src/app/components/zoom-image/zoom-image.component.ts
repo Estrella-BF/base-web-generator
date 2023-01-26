@@ -50,7 +50,6 @@ export class ZoomImageComponent implements OnInit {
   }
 
   clickOut() {
-    console.log('click out');
     this.closeZoom.emit(true);
 /*     this.showBigImage = false; */
    /*  this.zoomActive.emit(false); */
