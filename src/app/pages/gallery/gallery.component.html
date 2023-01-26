@@ -28,7 +28,8 @@
                     </div>
                     <app-zoom-image
                     [imageUrl]="imageSelected"
-                    [(activeZoom)]="activeZoom"
+                    [activeZoom]="activeZoom"
+                    (closeZoom)="closeZoom($event)"
                     >
                     </app-zoom-image>
 

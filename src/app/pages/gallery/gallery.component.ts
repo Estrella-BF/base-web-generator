@@ -14,7 +14,7 @@ export class GalleryComponent implements OnInit {
   imagesToShow: IImage[] = [];
   images: IImage[] = [
     {
-      url: './assets/temp/photos/handtufted/1hand.png',
+      url: './assets/temp/photos/handtufted/1Hand2.png',
       idMenu: 1
     },
     {
@@ -188,8 +188,12 @@ export class GalleryComponent implements OnInit {
     }
   }
 
-  public zoomOut(event: any) {
-  
+  public closeZoom(change: boolean) {
+    if (change) {
+      this.imageSelected = '';
+      this.activeZoom = false;
+    }
+
   }
 
 }

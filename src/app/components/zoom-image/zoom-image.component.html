@@ -1,4 +1,13 @@
-<div class="big-image"
+<div class="zoom">
+  <div class="parent" appClickOut (appClickOut)="clickOut()">
+    <div class="child bg-one"   
+    [style.background-image]="'url(' + imageUrl + ')'">
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="big-image"
 *ngIf="activeZoom"
 >
 
@@ -22,5 +31,5 @@
     </div>
   </div>
 
-</div>
+</div> -->
 

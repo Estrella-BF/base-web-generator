@@ -20,67 +20,6 @@
     display: block;
     width: 100%;
   }
-
-  .zoom__discount, .zoom__shared {
-    bottom: 0;
-    position: absolute;
-    margin-bottom: 1em;
-    right: 1em;
-  }
-
-  .zoom__shared {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: baseline;
-  }
-
-  .zoom__discount {
-    background-color: yellow;
-    border-radius: 50%;
-    top: 2em;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-
-  }
-
-
-  .zoom__shared--button { 
-    cursor: pointer;
-    background-color: blue;
-    border-radius: 50%;
-    bottom: 2em;
-    width: 2.5rem;
-    height: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0.8em;
-  }
-
-  .zoom__shared--icon {
-    color: white;
-  }
-
-  .zoom__shared--socialMedia {
-    color: white;
-    background-color: blue;
-    border-radius: 20px;
-    padding: 0.3em 1em;
-
-    a {
-      color: white;
-      padding: 0 0.5em;
-    }
-
-    span {
-      font-size: 1.2rem;
-      vertical-align: text-bottom;
-    }
-  }
   
 }
 
@@ -89,6 +28,7 @@
   z-index: 1;
   width: 100%;
   left: 0px;
+  top: 9em;
 
   .big-image__zoom {
     position: absolute;
@@ -96,4 +36,56 @@
     width: 50%;
     transform: translate(-50%, -25%);
   }
+}
+
+.zoom {
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, 0%);
+  left: 50%;
+}
+
+.parent {
+  width: 40em;
+  margin: 20px;
+  height: 30em;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  display: inline-block;
+cursor: pointer;
+}
+
+.child {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.parent:hover .child, .parent:focus .child {
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.parent:hover .child:before, .parent:focus .child:before {
+  display: block;
+}
+
+.child:before {
+  content: "";
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(52,73,94,0.75);
 }

@@ -14,7 +14,7 @@ export class ZoomImageComponent implements OnInit {
   imageUrl: string = './assets/img/1.jpeg';
 
   @Output()
-  activeZoomChange: EventEmitter<boolean> = new EventEmitter();
+  closeZoom: EventEmitter<boolean> = new EventEmitter();
 
   public value = true;
 
@@ -28,7 +28,7 @@ export class ZoomImageComponent implements OnInit {
     
     if (event) {
 
-      const zoomer = event.currentTarget;
+/*       const zoomer = event.currentTarget;
       let offsetX: number;
       let offsetY: number = 0;
       let x: number;
@@ -38,9 +38,9 @@ export class ZoomImageComponent implements OnInit {
       event.offsetY ? offsetY = event.offsetY : offsetX = event.touches[0].pageX;
 
       x = offsetX / zoomer.offsetWidth * 100;
-      y = offsetY / zoomer.offsetHeight * 100;
+      y = offsetY / zoomer.offsetHeight * 100; */
 
-      zoomer.style.backgroundPosition = x + '% ' + y + '%';
+      // zoomer.style.backgroundPosition = 10 + '% ' + 10 + '%';
       
   
     }
@@ -51,7 +51,7 @@ export class ZoomImageComponent implements OnInit {
 
   clickOut() {
     console.log('click out');
-    this.activeZoomChange.emit(false);
+    this.closeZoom.emit(true);
 /*     this.showBigImage = false; */
    /*  this.zoomActive.emit(false); */
 
