@@ -12,6 +12,7 @@ export class GalleryComponent implements OnInit {
   imageSelected = '';
   indexMenu = 0;
   imagesToShow: IImage[] = [];
+  counterToEnableToZoom = 1; // al segundo click se activa
   images: IImage[] = [
     {
       url: './assets/temp/photos/handtufted/1Hand2.png',
@@ -154,10 +155,13 @@ export class GalleryComponent implements OnInit {
   }
 
   selectImage(image: string) {
-    if (!this.activeZoom) {
+    if (!this.activeZoom && this.counterToEnableToZoom === 1) {
       this.activeZoom = true;
       this.imageSelected = image;
+    } else {
+      this.counterToEnableToZoom++;
     }
+
   }
 
   selectMenu(index: number) {
@@ -189,10 +193,18 @@ export class GalleryComponent implements OnInit {
   }
 
   public closeZoom(change: boolean) {
+    console.log('closeZoom', change);
     if (change) {
+      
+    if (this.activeZoom) {
+
+      console.log('a cero');
+      this.counterToEnableToZoom = 0;
+    }
       this.imageSelected = '';
       this.activeZoom = false;
     }
+
 
   }
 
